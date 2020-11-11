@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+    <ImageButton
+        android:id="@+id/MenuButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_settings_black_50dp"
+        android:onClick="swapBtPage"/>
+
+    <ImageButton
+        android:id="@+id/GraphButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_play_arrow_black_50dp"
+        android:onClick="swapGraphPage" />
+
+    <Button
+        android:id="@+id/btnSend"
+        android:layout_height="wrap_content"
+        android:layout_width="wrap_content"
+        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
+        android:text="SEND" />
+
+    <EditText
+        android:id="@+id/editText"
+        android:layout_height="50dp"
+        android:layout_width="match_parent"
+        android:layout_toLeftOf="@+id/btnSend"
+        android:layout_alignParentBottom="true"
+        android:hint="Enter Text Here"/>
+
+    <ListView
+        android:id="@+id/lvReceivedMessage"
+        android:layout_marginTop="15dp"
+        android:layout_margin="5dp"
+        android:layout_above="@+id/btnSend"
+        android:layout_width="match_parent"
+        android:layout_height="200dp"
+        android:background="@drawable/border"
+        android:padding="10dp"
+        android:transcriptMode="alwaysScroll"
+        android:stackFromBottom="true" />
+
+    <TextView
+        android:id="@+id/Data1"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/MenuButton"
+        android:hint="Latitude"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/Data2"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Data1"
+        android:hint="Longitude"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/Data3"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Data2"
+        android:hint="Azimuth"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/Data4"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Data3"
+        android:hint="AccelerationX"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/Data5"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Data4"
+        android:hint="AccelerationY"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <TextView
+        android:id="@+id/Data6"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_below="@+id/Data5"
+        android:hint="AccelerationZ"
+        android:layout_marginTop="10dp"
+        android:layout_marginLeft="10dp"
+        android:gravity="left"
+        android:textSize="30dp"/>
+
+    <ImageView
+        android:id="@+id/DoorOpen"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:layout_below="@+id/MenuButton"
+        android:layout_alignParentRight="true"
+        android:layout_marginTop="10dp"
+        android:rotation="90"
+        android:background="@android:color/transparent"
+        android:src="@drawable/transparent" />
+
+    <ImageButton
+        android:id="@+id/ShareButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/lvReceivedMessage"
+        android:layout_alignParentLeft="true"
+        android:layout_margin="5dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_share_black_24dp"
+        android:onClick="shareData" />
+
+    <ImageButton
+        android:id="@+id/DeleteButton"
+        android:layout_width="30dp"
+        android:layout_height="30dp"
+        android:layout_above="@+id/lvReceivedMessage"
+        android:layout_margin="5dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_delete_black_24dp"
+        android:onClick="deleteData" />
+
+</RelativeLayout>

@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ImageButton
+        android:id="@+id/ReturnButton"
+        android:layout_width="50dp"
+        android:layout_height="50dp"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_navigate_before_black_50dp"
+        android:onClick="swapMainPage"/>
+
+    <ImageButton
+        android:id="@+id/GraphReset"
+        android:layout_above="@+id/Linechart"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_alignParentRight="true"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_clear_black_24dp"
+        android:onClick="graphReset"/>
+
+    <ImageButton
+        android:id="@+id/GraphPause"
+        android:layout_width="24dp"
+        android:layout_height="24dp"
+        android:layout_marginRight="10dp"
+        android:layout_toLeftOf="@+id/GraphReset"
+        android:layout_above="@+id/Linechart"
+        android:background="@android:color/transparent"
+        android:src="@drawable/ic_pause_black_24dp" />
+
+    <com.github.mikephil.charting.charts.LineChart
+        android:id="@+id/Linechart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/ReturnButton"
+        android:background="@drawable/border"
+        ></com.github.mikephil.charting.charts.LineChart>
+
+</RelativeLayout>
